@@ -1,0 +1,28 @@
+# Local credentials and environment files
+auth.json
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Codex runtime state and downloaded plugins
+sessions/
+archived_sessions/
+history.jsonl
+logs/
+log/
+plugins/
+skills/.system/
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+
+# Build caches and local environments
+__pycache__/
+*.py[cod]
+.venv/
+node_modules/
+.DS_Store
+*.tar.gz

@@ -1,0 +1,4 @@
+interface:
+  display_name: "CERNBox Data Download"
+  short_description: "Download CERNBox/EOS data reliably"
+  default_prompt: "Use $cernbox-data-download to download this CERNBox or EOS dataset to my local data directory."

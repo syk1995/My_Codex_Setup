@@ -1,0 +1,39 @@
+# Default: balanced safety + productivity
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"
+model = "gpt-6-astra"
+model_reasoning_effort = "high"
+
+[sandbox_workspace_write]
+writable_roots = [
+  "/home/llr/ilc/shi",
+  "/grid_mnt/data__DATA/data.polcalice/data/flc/shi/MCP",
+]
+
+[features]
+# Useful quality-of-life flags
+undo = true
+
+[profiles.safe]
+# Strict profile for sensitive repos
+approval_policy = "untrusted"
+sandbox_mode = "read-only"
+
+[profiles.auto]
+# Faster profile for normal coding
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"
+
+[mcp_servers.particlephysics]
+command = "/home/llr/ilc/shi/data/MCP/ParticlePhysics-MCP-Server/run_stdio.sh"
+args = []
+
+[mcp_servers.Codex_CustomFuncions]
+command = "/home/llr/ilc/shi/data/MCP/Codex_CustomFuncions/run_stdio.sh"
+args = []
+
+[mcp_servers.notion]
+url = "https://mcp.notion.com/mcp"
+
+[projects."/grid_mnt/vol_home/llr/ilc/shi"]
+trust_level = "trusted"
